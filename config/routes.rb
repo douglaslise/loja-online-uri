@@ -1,5 +1,7 @@
 Loja::Application.routes.draw do
-  resources :produtos
+  resources :produtos do
+    get :imagem, :on => :member
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

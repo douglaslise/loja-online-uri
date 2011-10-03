@@ -17,7 +17,8 @@
     <td><%= produto.titulo %></td>
     <td><%= produto.descricao %></td>
     <td><%= produto.preco %></td>
-    <td><%= produto.imagem %></td>
+    <td><%= image_tag url_for(:action => :imagem,
+      :id => produto.id) %></td>
     <td><%= produto.tipo_imagem %></td>
     <td><%= link_to 'Show', produto %></td>
     <td><%= link_to 'Edit', edit_produto_path(produto) %></td>

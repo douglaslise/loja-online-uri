@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Loja::Application.config.secret_token = '972f7ce6846000935c479fd0af9a3ff9227ba65b3bbb01567d244d4e9ad4c74465fbe03c36f0f113ed3fd35cde50d8f0d37b82c9b50d45036ad22c38b2ab204e'
+Loja::Application.config.secret_token = 'd8c48763ea8ee05db925a5e76b0d5409793b2827c096251225c3713796fbf0d4553f9c62eeada942ae69e26bbaba5d9bc1e7ffc02bd46934d2b6bfab3a8a8327'

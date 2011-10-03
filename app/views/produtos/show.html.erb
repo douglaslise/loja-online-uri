@@ -17,7 +17,8 @@
 
 <p>
   <b>Imagem:</b>
-  <%= @produto.imagem %>
+  <%= image_tag url_for(:action => :imagem,
+    :id => @produto.id) %>
 </p>
 
 <p>

@@ -80,4 +80,14 @@ class ProdutosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def imagem
+    produto = Produto.find(params[:id])
+    if produto
+      send_data produto.imagem,
+        :filename => 'imagem_produto_' + produto.id.to_s,
+        :type => produto.tipo_imagem,
+        :disposition => 'inline'
+    end
+  end
 end

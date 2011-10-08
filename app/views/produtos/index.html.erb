@@ -16,7 +16,7 @@
   <tr>
     <td><%= produto.titulo %></td>
     <td><%= produto.descricao %></td>
-    <td><%= produto.preco %></td>
+    <td><%= produto.preco.reais_contabeis %></td>
     <td><%= image_tag url_for(:action => :imagem,
       :id => produto.id) %></td>
     <td><%= produto.tipo_imagem %></td>
@@ -28,5 +28,7 @@
 </table>
 
 <br />
+
+Total de <%= @qtd_produtos %> produtos
 
 <%= link_to 'New Produto', new_produto_path %>

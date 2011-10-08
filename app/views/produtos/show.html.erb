@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Titulo:</b>
+  <b>Título:</b>
   <%= @produto.titulo %>
 </p>
 
 <p>
-  <b>Descricao:</b>
+  <b>Descrição:</b>
   <%= @produto.descricao %>
 </p>
 
 <p>
-  <b>Preco:</b>
+  <b>Preço:</b>
   <%= @produto.preco.reais_contabeis %>
 </p>
 
@@ -27,5 +27,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_produto_path(@produto) %> |
-<%= link_to 'Back', produtos_path %>
+<%= link_to 'Editar', edit_produto_path(@produto) %> |
+<%= link_to 'Voltar', produtos_path %>

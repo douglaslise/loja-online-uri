@@ -1,10 +1,10 @@
-<h1>Listing produtos</h1>
+<h1>Listagem de produtos</h1>
 
 <table>
   <tr>
-    <th>Titulo</th>
-    <th>Descricao</th>
-    <th>Preco</th>
+    <th>Título</th>
+    <th>Descrição</th>
+    <th>Preço</th>
     <th>Imagem</th>
     <th>Tipo imagem</th>
     <th></th>
@@ -20,9 +20,9 @@
     <td><%= image_tag url_for(:action => :imagem,
       :id => produto.id) %></td>
     <td><%= produto.tipo_imagem %></td>
-    <td><%= link_to 'Show', produto %></td>
-    <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
-    <td><%= link_to 'Destroy', produto, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Exibir', produto %></td>
+    <td><%= link_to 'Editar', edit_produto_path(produto) %></td>
+    <td><%= link_to 'Excluir', produto, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -31,4 +31,4 @@
 
 Total de <%= @qtd_produtos %> produtos
 
-<%= link_to 'New Produto', new_produto_path %>
+<%= link_to 'Novo Produto', new_produto_path %>

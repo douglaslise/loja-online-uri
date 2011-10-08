@@ -17,6 +17,14 @@ ActiveRecord::Schema.define(:version => 20111008201932) do
     t.datetime "updated_at"
   end
 
+  create_table "itens", :force => true do |t|
+    t.integer  "produto_id"
+    t.integer  "carrinho_id"
+    t.integer  "quantidade",  :default => 1
+    t.decimal  "preco"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "produtos", :force => true do |t|
     t.string   "titulo"

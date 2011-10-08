@@ -1,4 +1,5 @@
 Loja::Application.routes.draw do
+  resources :itens
 
   resources :carrinhos
 

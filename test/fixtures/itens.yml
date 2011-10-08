@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  produto_id: 1
+  carrinho_id: 1
+  quantidade: 1
+  preco: 9.99
+
+two:
+  produto_id: 1
+  carrinho_id: 1
+  quantidade: 1
+  preco: 9.99

@@ -1,4 +1,7 @@
 Loja::Application.routes.draw do
+
+  resources :carrinhos
+
   get "loja/index"
   root :to => 'loja#index', :as => :loja
 

@@ -1,0 +1,21 @@
+<h1>Listing carrinhos</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @carrinhos.each do |carrinho| %>
+  <tr>
+    <td><%= link_to 'Show', carrinho %></td>
+    <td><%= link_to 'Edit', edit_carrinho_path(carrinho) %></td>
+    <td><%= link_to 'Destroy', carrinho, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Carrinho', new_carrinho_path %>

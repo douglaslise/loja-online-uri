@@ -1,0 +1,31 @@
+#colunas {
+    background: #9c9;
+}
+#colunas #lateral {
+    float: left;
+    width: 13em;
+    background: #141;
+    padding: 1em 2em;
+}
+#colunas #lateral ul {
+    padding: 0
+}
+#colunas #lateral li {
+    list-style: none;
+}
+#colunas #lateral li a {
+    color: #bfb;
+    font-size: small;
+}
+#colunas #principal {
+    margin-left: 17em;
+    background: white;
+    padding: 1em;
+}
+#topo {
+    background: #9c9;
+    border-bottom: 2px solid;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}

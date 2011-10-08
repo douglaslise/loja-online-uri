@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Loja</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>Loja</title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="topo">
+      Loja Online
+    </div>
+    <div id="colunas">
+      <div id="lateral">
+        <ul>
+          <li>
+            <%= link_to "Página Inicial", '/'%>
+          </li>
+        </ul>
+      </div>
+      <div id="principal">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,15 +1,15 @@
 body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size:   13px;
+    line-height: 18px;
 }
 
 pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+    background-color: #eee;
+    padding: 10px;
+    font-size: 11px;
 }
 
 a { color: #000; }
@@ -17,40 +17,81 @@ a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
 div.field, div.actions {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #notice {
-  color: green;
+    color: green;
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+    padding: 2px;
+    background-color: red;
+    display: table;
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
 }
 
 #error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
 }
 
 #error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
+    font-size: 12px;
+    list-style: square;
+}
+
+table.produtos {
+    border-collapse: collapse;
+}
+table.produtos tr td {
+    padding: 5px;
+    vertical-align: top;
+}
+.produtos .imagem_lista {
+    width: 60px;
+    height: 70px;
+}
+.produtos .descricao_lista {
+    width: 60%;
+}
+.produtos .descricao_lista dl {
+    margin: 0
+}
+.produtos .descricao_lista dt {
+    color: #505050;
+    font-weight: bold;
+    font-size: larger;
+}
+.produtos .descricao_lista dd {
+    margin: 0
+}
+.produtos th.coluna_titulo {
+    text-align: left
+}
+
+.produtos .linha_par {
+    background: #e0f8f8;
+}
+.produtos .linha_impar {
+    background: #c0d8d8;
+}
+.produtos td.acoes_lista {
+    text-align: right;
+    font-size: small;
+    padding-left: 1em;
 }

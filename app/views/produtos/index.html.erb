@@ -1,32 +1,33 @@
 <h1>Listagem de produtos</h1>
 
-<table>
+<table class="produtos">
   <tr>
-    <th>Título</th>
-    <th>Descrição</th>
-    <th>Preço</th>
     <th>Imagem</th>
-    <th></th>
-    <th></th>
+    <th class="coluna_titulo">Título/Descrição</th>
+    <th>Preço</th>
     <th></th>
   </tr>
 
-<% @produtos.each do |produto| %>
-  <tr>
-    <td><%= produto.titulo %></td>
-    <td><%= produto.descricao %></td>
-    <td><%= produto.preco.reais_contabeis %></td>
-    <td><%= image_tag url_for(:action => :imagem,
-      :id => produto.id) %></td>
-    <td><%= link_to 'Exibir', produto %></td>
-    <td><%= link_to 'Editar', edit_produto_path(produto) %></td>
-    <td><%= link_to 'Excluir', produto, :confirm => 'Você tem certeza?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% @produtos.each do |produto| %>
+    <tr class="<%= cycle('linha_impar','linha_par') %>">
+      <td><%= image_tag url_for(:action => :imagem,
+          :id => produto.id), :class=>"imagem_lista" %></td>
+      <td class="descricao_lista">
+        <dl>
+          <dt><%= produto.titulo %></dt>
+          <dd><%= produto.descricao %></dd>
+        </dl>
+      </td>
+      <td><%= produto.preco.reais_contabeis %></td>
+      <td class="acoes_lista">
+        <%= link_to 'Exibir', produto %><br />
+        <%= link_to 'Editar', edit_produto_path(produto) %><br />
+        <%= link_to 'Excluir', produto, :confirm => 'Você tem certeza?', :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
 </table>
 
 <br />
-
-Total de <%= @qtd_produtos %> produtos
 
 <%= link_to 'Novo Produto', new_produto_path %>

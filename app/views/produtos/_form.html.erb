@@ -1,7 +1,7 @@
 <%= form_for(@produto, :html => {:multipart=>true}) do |f| %>
   <% if @produto.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@produto.errors.count, "error") %> prohibited this produto from being saved:</h2>
+      <h2><%= pluralize(@produto.errors.count, "erro impediu", "erros impediram") %> este produto de ser salvo:</h2>
 
       <ul>
       <% @produto.errors.full_messages.each do |msg| %>

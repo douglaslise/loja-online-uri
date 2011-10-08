@@ -1,0 +1,28 @@
+.produto img {
+    position: absolute;
+    width: 80px;
+}
+.produto h1 {
+    font: 150% sans-serif;
+    color: #226;
+    border-bottom: 3px dotted blue;
+}
+.produto {
+    overflow: auto;
+    border-bottom: 1px dotted;
+}
+.produto h3 {
+    font-size: 120%;
+    margin-left: 100px;
+    font-family: sans-serif;
+}
+.produto div, .produto p {
+    margin-left: 100px;
+}
+.produto p {
+    font-family: sans-serif;
+}
+.produto .preco {
+    color: darkblue;
+    font-weight: bold;
+}

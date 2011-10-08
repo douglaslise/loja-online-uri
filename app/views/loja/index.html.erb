@@ -1,0 +1,10 @@
+<% @produtos.each do |produto| %>
+  <div class="produto">
+    <%= image_tag imagem_produto_path(produto) %>
+    <h3><%= produto.titulo %></h3>
+    <p><%= produto.descricao  %></p>
+    <div class="preco">
+      <%= produto.preco %>
+    </div>
+  </div>
+<% end %>

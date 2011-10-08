@@ -1,4 +1,7 @@
 Loja::Application.routes.draw do
+  get "loja/index"
+  root :to => 'loja#index', :as => :loja
+
   resources :produtos do
     get :imagem, :on => :member
   end

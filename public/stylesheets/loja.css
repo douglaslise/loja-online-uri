@@ -26,3 +26,10 @@
     color: darkblue;
     font-weight: bold;
 }
+
+.produto_par {
+    background: #eee;
+}
+.produto_impar {
+    background: #ddd;
+}

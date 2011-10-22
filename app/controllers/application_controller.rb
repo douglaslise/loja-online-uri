@@ -3,8 +3,7 @@ class ApplicationController < ActionController::Base
 
   def carrinho_atual
     begin
-      carrinho =
-        Carrinho.find(session[:id_carrinho])
+      Carrinho.find(session[:id_carrinho])
     rescue
       carrinho = Carrinho.create
       session[:id_carrinho] = carrinho.id

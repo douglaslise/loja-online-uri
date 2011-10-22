@@ -5,6 +5,8 @@
     <p><%= produto.descricao  %></p>
     <div class="preco">
       <%= produto.preco %>
+      <%= button_to "Adicionar ao Carrinho",
+        itens_path(:id_produto => produto.id)%>
     </div>
   </div>
 <% end %>

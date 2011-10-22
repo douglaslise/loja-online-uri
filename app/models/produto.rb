@@ -1,6 +1,8 @@
 # encoding: utf-8
 class Produto < ActiveRecord::Base
 
+  has_many :itens, :dependent => :restrict
+
   validates :titulo, :presence => true,
     :uniqueness => 
     {:message => 'já utilizado em outro produto'}

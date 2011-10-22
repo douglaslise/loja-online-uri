@@ -33,3 +33,7 @@
 .produto_impar {
     background: #ddd;
 }
+
+form, form div {
+    display: inline;
+}

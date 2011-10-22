@@ -40,11 +40,17 @@ class ItensController < ApplicationController
   # POST /itens
   # POST /itens.xml
   def create
-    @item = Item.new(params[:item])
+    @carrinho = carrinho_atual
+    produto = Produto.find(params[:id_produto])
+    @item = @carrinho.itens.build(
+      :produto => produto)
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to(@item, :notice => 'Item was successfully created.') }
+        format.html { 
+          redirect_to(@carrinho,
+            :notice =>
+              'Item adicionado ao carrinho.') }
         format.xml  { render :xml => @item, :status => :created, :location => @item }
       else
         format.html { render :action => "new" }

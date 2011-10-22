@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<ul>
-  <% @carrinho.itens.each do |item| %>
-    <li><%= item.produto.titulo %></li>
-  <% end %>
-</ul>
+<%= render @carrinho %>
 
 <%= link_to "Voltar", loja_path %>

@@ -72,11 +72,12 @@ class CarrinhosController < ApplicationController
   # DELETE /carrinhos/1
   # DELETE /carrinhos/1.xml
   def destroy
-    @carrinho = Carrinho.find(params[:id])
+    @carrinho = carrinho_atual
     @carrinho.destroy
+    session[:id_carrinho] = nil
 
     respond_to do |format|
-      format.html { redirect_to(carrinhos_url) }
+      format.html { redirect_to(loja_url) }
       format.xml  { head :ok }
     end
   end

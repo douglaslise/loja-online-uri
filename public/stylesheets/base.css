@@ -17,6 +17,10 @@
     color: #bfb;
     font-size: small;
 }
+#colunas #lateral #carrinho {
+    color: white;
+}
+
 #colunas #principal {
     margin-left: 17em;
     background: white;

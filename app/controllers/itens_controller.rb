@@ -42,13 +42,19 @@ class ItensController < ApplicationController
   def create
     @carrinho = carrinho_atual
     produto = Produto.find(params[:id_produto])
-    @item = @carrinho.itens.build(
-      :produto => produto)
+    @item = @carrinho.itens.
+      find_by_produto_id(params[:id_produto])
+    if @item
+      @item.quantidade += 1
+    else
+      @item = @carrinho.itens.build(
+        :produto => produto)
+    end
 
     respond_to do |format|
       if @item.save
         format.html { 
-          redirect_to(@carrinho,
+          redirect_to(loja_url,
             :notice =>
               'Item adicionado ao carrinho.') }
         format.xml  { render :xml => @item, :status => :created, :location => @item }

@@ -57,6 +57,7 @@ class ItensController < ApplicationController
           redirect_to(loja_url,
             :notice =>
               'Item adicionado ao carrinho.') }
+        format.js
         format.xml  { render :xml => @item, :status => :created, :location => @item }
       else
         format.html { render :action => "new" }

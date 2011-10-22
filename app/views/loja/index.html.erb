@@ -6,7 +6,8 @@
     <div class="preco">
       <%= produto.preco %>
       <%= button_to "Adicionar ao Carrinho",
-        itens_path(:id_produto => produto.id)%>
+        itens_path(:id_produto => produto.id),
+        :remote => true %>
     </div>
   </div>
 <% end %>

@@ -1,7 +1,8 @@
 <table>
   <%= render carrinho.itens %>
 </table>
-
-<%= button_to "Limpar Carrinho", carrinho,
-  :method => :delete,
-  :confirm => "Você tem certeza?"%>
+<% if carrinho.itens.count > 0 %>
+  <%= button_to "Limpar Carrinho", carrinho,
+    :method => :delete,
+    :confirm => "Você tem certeza?"%>
+<% end %>

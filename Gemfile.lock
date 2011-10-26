@@ -81,6 +81,6 @@ PLATFORMS
 
 DEPENDENCIES
   brdinheiro
-  jquery-rails
+  jquery-rails (~> 1.0.13)
   rails (= 3.0.9)
   sqlite3

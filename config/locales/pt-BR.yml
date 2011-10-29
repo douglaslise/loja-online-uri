@@ -1,6 +1,12 @@
 # encoding: UTF-8
 # pt-BR translations for Ruby on Rails
 "pt-BR":
+  layouts:
+    application:
+      titulo: "Loja Online"
+  carrinhos:
+    carrinho:
+      titulo_carrinho: "Carrinho"
   # formatos de data e hora
   date:
     formats:

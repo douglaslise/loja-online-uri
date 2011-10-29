@@ -1,13 +1,11 @@
 Loja::Application.routes.draw do
-  resources :pedidos
-
-  resources :itens
-
-  resources :carrinhos
-
-  get "loja/index"
-  root :to => 'loja#index', :as => :loja
-
+  scope '(:idioma)' do
+    resources :pedidos
+    resources :itens
+    resources :carrinhos
+    resources :loja, :only => :index
+    root :to => 'loja#index', :as => :loja
+  end
   resources :produtos do
     get :imagem, :on => :member
   end

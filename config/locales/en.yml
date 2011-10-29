@@ -3,3 +3,9 @@
 
 en:
   hello: "Hello world"
+  layouts:
+    application:
+      titulo: "Online Store"
+  carrinhos:
+    carrinho:
+      titulo_carrinho: "Cart"

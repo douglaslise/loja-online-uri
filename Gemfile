@@ -8,7 +8,8 @@ gem 'brdinheiro'
 
 gem 'sqlite3'
 gem 'jquery-rails', '~> 1.0.13'
-
+gem 'mongrel', '>= 1.2.0.pre2'
+gem 'will_paginate'
 # Use unicorn as the web server
 # gem 'unicorn'
 

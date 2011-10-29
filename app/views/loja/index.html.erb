@@ -1,3 +1,6 @@
+<% if notice %>
+  <p id="notice"><%= notice %> </p>
+<% end %>
 <% @produtos.each do |produto| %>
   <div class="produto <%= cycle("produto_par","produto_impar")  %>">
     <%= image_tag imagem_produto_path(produto) %>

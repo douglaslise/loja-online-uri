@@ -2,7 +2,9 @@ class PedidosController < ApplicationController
   # GET /pedidos
   # GET /pedidos.xml
   def index
-    @pedidos = Pedido.all
+    @pedidos = Pedido.paginate(
+      :page => params['page'],
+      :per_page => 3)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,12 +48,14 @@ class PedidosController < ApplicationController
       @carrinho)
     respond_to do |format|
       if @pedido.save
-        @carrinho.destroy
         session[:id_carrinho] = nil
+        NotificacaoPedido.
+          recebido(@pedido).
+          deliver
         format.html {
-          redirect_to(
-            loja_url,
-            :notice => 'Pedido criado com sucesso.') }
+          redirect_to(loja_url,
+            :notice => 'Pedido criado com sucesso.'
+          ) }
         format.xml  { render :xml => @pedido, :status => :created, :location => @pedido }
       else
         format.html { render :action => "new" }

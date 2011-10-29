@@ -14,7 +14,10 @@
   <b>Email:</b>
   <%= @pedido.email %>
 </p>
-
+<h3>Itens</h3>
+<table>
+  <%= render @pedido.itens %>
+</table>
 
 <%= link_to 'Edit', edit_pedido_path(@pedido) %> |
 <%= link_to 'Back', pedidos_path %>

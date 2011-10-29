@@ -12,4 +12,12 @@ class Pedido < ActiveRecord::Base
     end
   end
 
+  def valor_total
+    total = 0.0
+    itens.each do |item|
+      total += item.valor_total
+    end
+    total
+  end
+
 end

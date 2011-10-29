@@ -1,0 +1,9 @@
+Prezado <%= @pedido.nome %>
+
+Esta é uma notificação de que seu pedido
+foi recebido.
+
+Itens do seu pedido:
+<%= render @pedido.itens %>
+
+Valor Total: <%= @pedido.valor_total.reais %>

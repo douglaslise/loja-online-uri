@@ -33,3 +33,9 @@
     text-align: center;
     font-size: 30px;
 }
+.valor_total {
+    text-align: right;
+}
+.total_carrinho .valor_total {
+    border-top: 2px solid white;
+}

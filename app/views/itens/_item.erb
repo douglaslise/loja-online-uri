@@ -1,4 +1,7 @@
-<tr>
+<tr id="<%=
+(item == @item_atual ? 'item_atual' : '')
+  %>">
   <td><%= item.quantidade %>&times;</td>
   <td><%= item.produto.titulo %></td>
+  <td class="valor_total"><%= item.valor_total.reais  %></td>
 </tr>

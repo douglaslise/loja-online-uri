@@ -1,8 +1,16 @@
 <table>
   <%= render carrinho.itens %>
+  <tr class="total_carrinho">
+    <td colspan="2"></td>
+    <td class="valor_total">
+      <%= carrinho.valor_total.reais %>
+    </td>
+  </tr>
 </table>
 <% if carrinho.itens.count > 0 %>
   <%= button_to "Limpar Carrinho", carrinho,
     :method => :delete,
-    :confirm => "Você tem certeza?"%>
+    :confirm => "Você tem certeza?" %>
+  <%= button_to "Comprar", new_pedido_path,
+    :method => :get %>
 <% end %>
